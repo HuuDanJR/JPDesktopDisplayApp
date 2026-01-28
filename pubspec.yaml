@@ -36,11 +36,13 @@ dependencies:
   flutter_acrylic: ^1.1.3
   flutter_bloc: ^9.1.1
   flutter_phoenix: ^1.1.1
+  flutter_shaders: ^0.1.3
   get: ^4.7.2
   hive: ^2.2.3
   hive_flutter: ^1.1.0
   http: ^1.4.0
   intl: ^0.20.2
+  liquid_glass_easy: ^1.1.1
   logger: ^2.5.0
   media_kit: ^1.2.0
   media_kit_libs_video: ^1.0.6
@@ -187,6 +189,12 @@ flutter:
     - asset/video/led_floor3_mega_back/
     - asset/video/led_floor3_mega_back/background.mp4
     - asset/video/led_floor3_mega_back/background2.mov
+    - asset/image/
+    - assets/shaders/liquid_glass.frag
+
+  # shaders:
+  #   - assets/shaders/liquid_glass.frag
+
 
 
   fonts:

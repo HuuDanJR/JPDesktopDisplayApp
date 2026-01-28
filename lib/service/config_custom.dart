@@ -142,6 +142,8 @@ class ConfigCustom {
   static const  String  videoBackgroundScreen2 = 'asset/video/video_background2.mp4';
   //LED WINGS
   static const  String  videoBackgroundScreenLedWingAll = 'asset/video/led_wings/background/background.mp4';
+  static const  String  videoBackgroundScreenFull = 'asset/video/videobackgroundFull.mp4';
+
   static const  String  videoHitScreenLedWingsAll = 'asset/video/led_wings/hit/hit.mp4';
 
 
@@ -164,6 +166,8 @@ class ConfigCustom {
   //LED CUSTOM TRIPPLE & DAILY
   //LED LED FLOOR 2 
   static const  String  videoBackgroundScreenLedFloor2 = 'asset/video/led_floor2/background.mp4';
+  static const  String  videoBackgroundHDNoContainerBorder = 'asset/video/videobackgroundNoContainer.mp4';
+
   static const  String  videoHitScreenLedFloor2 = 'asset/video/led_floor2/hit.mp4';
 
   //LED LED FLOOR 3 MEGA 
@@ -308,6 +312,48 @@ class ConfigCustom {
   static const double jp_monthly_screen_dY_ledstair = 46;
   static const double jp_vegas_screen_dX_ledstair = -250;
   static const double jp_vegas_screen_dY_ledstair = 46;
+  
+  //LED STAIR SLIDE ANIMATION VERSION 1920x1080
+
+  static const double jp_vegas_screen_dX_ledstairSlideAnimation2 = 4340;
+  static const double jp_vegas_screen_dY_ledstairSlideAnimation2 = 45;
+  static const double jp_monthly_screen_dX_ledstairSlideAnimation2 = 4080;
+  static const double jp_monthly_screen_dY_ledstairSlideAnimation2 = 45;
+  static const double jp_highlimit_screen_dX_ledstairSlideAnimation2 = 3820;
+  static const double jp_highlimit_screen_dY_ledstairSlideAnimation2 = 45;
+  static const double jp_weekly_screen_dX_ledstairSlideAnimation2 = 3560;
+  static const double jp_weekly_screen_dY_ledstairSlideAnimation2 = 45;
+  static const double jp_triple_screen_dX_ledstairSlideAnimation2 = 3300;
+  static const double jp_triple_screen_dY_ledstairSlideAnimation2 = 45;
+  static const double jp_dozen_screen_dX_ledstairSlideAnimation2 = 3140;
+  static const double jp_dozen_screen_dY_ledstairSlideAnimation2 = 45;
+  static const double jp_dailygolden_screen_dX_ledstairSlideAnimation2 = 2880;
+  static const double jp_dailygolden_screen_dY_ledstairSlideAnimation2 = 45;
+  static const double jp_daily_screen_dX_ledstairSlideAnimation2 = 2620;
+  static const double jp_daily_screen_dY_ledstairSlideAnimation2 = 45;
+  static const double jp_frequent_screen_dX_ledstairSlideAnimation2 = 2360;
+  static const double jp_frequent_screen_dY_ledstairSlideAnimation2 = 45;
+
+  static const double jp_vegas_screen_dX_ledstairSlideAnimation = 2100;
+  static const double jp_vegas_screen_dY_ledstairSlideAnimation = 45;
+  static const double jp_monthly_screen_dX_ledstairSlideAnimation = 1840;
+  static const double jp_monthly_screen_dY_ledstairSlideAnimation = 45;
+  static const double jp_highlimit_screen_dX_ledstairSlideAnimation = 1580;
+  static const double jp_highlimit_screen_dY_ledstairSlideAnimation = 45;
+  static const double jp_weekly_screen_dX_ledstairSlideAnimation = 1320;
+  static const double jp_weekly_screen_dY_ledstairSlideAnimation = 45;
+  static const double jp_triple_screen_dX_ledstairSlideAnimation = 1060;
+  static const double jp_triple_screen_dY_ledstairSlideAnimation = 45;
+  static const double jp_dozen_screen_dX_ledstairSlideAnimation = 800;
+  static const double jp_dozen_screen_dY_ledstairSlideAnimation = 45;
+  static const double jp_dailygolden_screen_dX_ledstairSlideAnimation = 540;
+  static const double jp_dailygolden_screen_dY_ledstairSlideAnimation = 45;
+  static const double jp_daily_screen_dX_ledstairSlideAnimation = 280;
+  static const double jp_daily_screen_dY_ledstairSlideAnimation = 45;
+  static const double jp_frequent_screen_dX_ledstairSlideAnimation = 20;
+  static const double jp_frequent_screen_dY_ledstairSlideAnimation = 45;
+  //LED STAIR SLIDE ANIMATION VERSION 1920x1080
+
 
 
   //LED LOBBY 1080x1920
@@ -539,7 +585,7 @@ class ConfigCustom {
   static const double jp_triple_screen_dY_ledCustomTRIPLEDAILY = 107.5;
   static const double jp_dailygolden_screen_dX_ledCustomTRIPLEDAILY = -6.5;
   static const double jp_dailygolden_screen_dY_ledCustomTRIPLEDAILY = 430;
-    static const double jp_frequent_screen_dX_ledCustomTRIPLEDAILY = -6.5;
+  static const double jp_frequent_screen_dX_ledCustomTRIPLEDAILY = -6.5;
   static const double jp_frequent_screen_dY_ledCustomTRIPLEDAILY = 740;
   static const double odo_height_1920x1080_ledCustomTRIPLEDAILY= 190;
   static const double text_odo_size_1920x1080_ledCustomTRIPLEDAILY= 182;

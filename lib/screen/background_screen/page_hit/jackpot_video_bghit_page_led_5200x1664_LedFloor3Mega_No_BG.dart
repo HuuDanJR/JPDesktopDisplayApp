@@ -63,7 +63,8 @@ class _JackpotBackgroundVideoHit5200x1664LedFloor3MegaNoBGState extends State<Ja
           Positioned(
             top:screenSize.height/7.25,
             left:0,right:0,
-            child: JackpotTextDisplayFull(
+            child: 
+            JackpotTextDisplayFull(
               number: widget.number,
               value: widget.value,
             ),

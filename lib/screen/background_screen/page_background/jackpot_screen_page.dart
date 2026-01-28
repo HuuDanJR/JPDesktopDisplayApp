@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:playtech_transmitter_app/SlideAnimation/LiquidGrassScreen/gameOdometerChildWLiquidGrass.dart';
 import 'package:playtech_transmitter_app/odometer/odometer_child.dart';
 import 'package:playtech_transmitter_app/odometer/odometer_child_fix_2946x642.dart';
 import 'package:playtech_transmitter_app/odometer/odometer_child_led_1080x1920_Lobby.dart';
@@ -8,6 +9,8 @@ import 'package:playtech_transmitter_app/odometer/odometer_child_led_1920x1080_C
 import 'package:playtech_transmitter_app/odometer/odometer_child_led_1920x1080_Floor2.dart';
 import 'package:playtech_transmitter_app/odometer/odometer_child_led_1920x1080_NonSmoke.dart';
 import 'package:playtech_transmitter_app/odometer/odometer_child_led_1920x1080_RL_Floor2.dart';
+import 'package:playtech_transmitter_app/SlideAnimation/LiquidGrassScreen/grassliquid_odometer_body.dart';
+import 'package:playtech_transmitter_app/odometer/odometer_child_led_1920x1080_curvedSlideAnimated.dart';
 import 'package:playtech_transmitter_app/odometer/odometer_child_led_1920x1080_stair.dart';
 import 'package:playtech_transmitter_app/odometer/odometer_child_led_5200x1664_Floor3Mega.dart';
 import 'package:playtech_transmitter_app/odometer/odometer_child_led_5200x1664_Floor3MegaBACK.dart';
@@ -243,13 +246,38 @@ class JackpotOdometer extends StatelessWidget {
         //   isSmall: isSmall,
         // );
         
-          // return GameOdometerChildLed1920x1080Curved(
-          //           startValue: values.startValue,
-          //           endValue: values.endValue,
-          //           nameJP: nameJP,
-          //           hiveValue: hiveValue,
-          //           isSmall: isSmall,
-          // );
+        // return GameOdometerChildLed1920x1080Curved(
+        //             startValue: values.startValue,
+        //             endValue: values.endValue,
+        //             nameJP: nameJP,
+        //             hiveValue: hiveValue,
+        //             isSmall: isSmall,
+        // );
+        //Grass Liquid V1
+        // return RepaintBoundary(
+        //   child: GameOdometerChildLed1920x1080CurvedSlideAnimated(
+        //               startValue: values.startValue,
+        //               endValue: values.endValue,
+        //               nameJP: nameJP,
+        //               hiveValue: hiveValue,
+        //               isSmall: isSmall,
+        //   ),
+        // );//End Grass Liquid V1
+
+
+        // Grass Liquid V2
+        return RepaintBoundary( child: GameOdometerChildLed1920x1080CurvedGrassLiquidSlideAnimated(
+                                startValue: values.startValue,
+                                endValue: values.endValue,
+                                nameJP: nameJP,
+                                hiveValue: hiveValue,
+                                isSmall: isSmall,
+                    ),
+        );
+        
+        //Grass Liquid V2
+
+
           // return GameOdometerChildLed1920x1080Curved(
           //           startValue: values.startValue,
           //           endValue: values.endValue,
@@ -264,13 +292,13 @@ class JackpotOdometer extends StatelessWidget {
           //           hiveValue: hiveValue,
           //           isSmall: isSmall,
           // );
-        return GameOdometerChildLed1920x1080Floor2( //BANK END SIDE FLOOR 2 
-            startValue: values.startValue,
-            endValue: values.endValue,
-            nameJP: nameJP,
-            hiveValue: hiveValue,
-            isSmall: isSmall,
-        );
+        // return GameOdometerChildLed1920x1080Floor2( //BANK END SIDE FLOOR 2 
+        //     startValue: values.startValue,
+        //     endValue: values.endValue,
+        //     nameJP: nameJP,
+        //     hiveValue: hiveValue,
+        //     isSmall: isSmall,
+        // );
 
         // return RepaintBoundary(
         //   child: GameOdometerChildLed1080x1920Lobby(

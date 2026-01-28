@@ -1,11 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:playtech_transmitter_app/screen/background_screen/page_background/screen_child_ledaris/screen_led_ATM.dart';
-import 'package:playtech_transmitter_app/screen/background_screen/page_background/screen_child_ledaris/screen_led_Floor2.dart';
-import 'package:playtech_transmitter_app/screen/background_screen/page_background/screen_child_ledaris/screen_led_MarX.dart';
-import 'package:playtech_transmitter_app/screen/background_screen/page_background/screen_child_ledaris/screen_led_Non_Smoke.dart';
-import 'package:playtech_transmitter_app/screen/background_screen/page_background/screen_child_ledaris/screen_led_curved.dart';
-import 'package:playtech_transmitter_app/screen/background_screen/page_background/screen_child_ledaris/screen_led_stair.dart';
 import 'package:playtech_transmitter_app/screen/background_screen/page_background/screen_child_ledaris/screen_led_stair_SlideAnimation.dart';
 import 'package:playtech_transmitter_app/service/hive_service/jackpot_hive_service.dart';
 import 'package:playtech_transmitter_app/screen/background_screen/bloc_jp_price/main/jackpot_price_bloc.dart';
@@ -14,15 +8,16 @@ import 'package:playtech_transmitter_app/service/config_custom.dart';
 import 'package:playtech_transmitter_app/screen/setting/setting_service.dart';
 import 'package:playtech_transmitter_app/screen/background_screen/bloc/video_bloc.dart';
 import 'package:playtech_transmitter_app/service/widget/circlar_progress.dart';
+import 'package:playtech_transmitter_app/SlideAnimation/version/InfiniteSlideMarquee.dart';
 
-class JackpotDisplayScreenLedHD1920x1080 extends StatefulWidget {
-  const JackpotDisplayScreenLedHD1920x1080({super.key});
+class JackpotDisplayScreenSlideAnimationLedHD1920x1080 extends StatefulWidget {
+  const JackpotDisplayScreenSlideAnimationLedHD1920x1080({super.key});
 
   @override
-  State<JackpotDisplayScreenLedHD1920x1080> createState() => _JackpotDisplayScreenLedHD1920x1080State();
+  State<JackpotDisplayScreenSlideAnimationLedHD1920x1080> createState() => _JackpotDisplayScreenSlideAnimationLedHD1920x1080State();
 }
 
-class _JackpotDisplayScreenLedHD1920x1080State extends State<JackpotDisplayScreenLedHD1920x1080> {
+class _JackpotDisplayScreenSlideAnimationLedHD1920x1080State extends State<JackpotDisplayScreenSlideAnimationLedHD1920x1080> {
   final SettingsService settingsService = SettingsService();
   late Future<Map<String, double>> _hiveValuesFuture;
 
@@ -57,24 +52,15 @@ class _JackpotDisplayScreenLedHD1920x1080State extends State<JackpotDisplayScree
                   previous.jackpotValues != current.jackpotValues ||
                   previous.previousJackpotValues != current.previousJackpotValues,
               builder: (context, priceState) {
-                // debugPrint('Building JackpotDisplayScreenLedHD1920x1080:${priceState.hasData}');
+                // debugPrint('Building JackpotDisplayScreenSlideAnimationLedHD1920x1080:${priceState.hasData}');
                 return Center(
                   child: priceState.isConnected
                       ?  SizedBox(
                           width: ConfigCustom.fixWidth_HD_led_curved,
                           height: ConfigCustom.fixWidth_HD_led_curved,
                           child:
-                          //  screenLedNonSmoke(context, hiveValues,priceState.previousJackpotValues,priceState.jackpotValues),
-                          // screenLedFloor2(context, hiveValues,priceState.previousJackpotValues,priceState.jackpotValues),
-                          //  screenLedATM(context, hiveValues,priceState.previousJackpotValues,priceState.jackpotValues),
-                            // screenLedStair(context, hiveValues,priceState.previousJackpotValues,priceState.jackpotValues),
-                            
-                            screenLedStairSLIDEANIMATION(context, hiveValues,priceState.previousJackpotValues,priceState.jackpotValues),
+                          RepaintBoundary(child: screenLedStairSLIDEANIMATION(context, hiveValues,priceState.previousJackpotValues,priceState.jackpotValues)),
 
-                            // screenLedCurved(context, hiveValues,priceState.previousJackpotValues,priceState.jackpotValues),
-                            // screenLedMarX(context, hiveValues,priceState.previousJackpotValues,priceState.jackpotValues),
-                            // screenLedMarXNEW(context, hiveValues,priceState.previousJackpotValues,priceState.jackpotValues), // ADD 1 MORE PRICE 
-                            // screenLedNonSmoke(context, hiveValues,priceState.previousJackpotValues,priceState.jackpotValues),
                         )
                       :
                       priceState.error != null ? Container() : circularProgessCustom()

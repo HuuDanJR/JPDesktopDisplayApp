@@ -1,37 +1,21 @@
-import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:media_kit/media_kit.dart';
 import 'package:media_kit_video/media_kit_video.dart';
 import 'package:playtech_transmitter_app/screen/background_screen/bloc_socket_time/jackpot_bloc_socket.dart';
 import 'package:playtech_transmitter_app/screen/background_screen/bloc_socket_time/jackpot_event_socket.dart';
-import 'package:playtech_transmitter_app/screen/background_screen/page_background/jackpot_screen_SlideAnimation1920x1080.dart';
-import 'package:playtech_transmitter_app/screen/background_screen/page_background/jackpot_screen_page.dart';
-// import 'package:playtech_transmitter_app/screen/background_screen/bloc_socket_time/jackpot_state_socket.dart';
-// import 'package:playtech_transmitter_app/screen/background_screen/page_background/jackpot_screen_page.dart';
-import 'package:playtech_transmitter_app/screen/background_screen/page_background/jackpot_screen_page_1080x1920_lobby.dart';
-import 'package:playtech_transmitter_app/screen/background_screen/page_background/jackpot_screen_page_1920x1080Floor3Mega_BACK.dart';
-import 'package:playtech_transmitter_app/screen/background_screen/page_background/jackpot_screen_page_5200x1664Floor3Mega.dart';
-import 'package:playtech_transmitter_app/screen/background_screen/page_background/jackpot_screen_page__hd_1920x1080_Custom_TripleDaily.dart';
-import 'package:playtech_transmitter_app/screen/background_screen/page_background/jackpot_screen_page__hd_1920x1080_RL_FLOOR2.dart';
-import 'package:playtech_transmitter_app/screen/background_screen/page_background/jackpot_screen_page_hd_led_1920x1080.dart';
-import 'package:playtech_transmitter_app/screen/background_screen/page_background/jackpot_screen_page_horizontal_2496x264.dart';
-import 'package:playtech_transmitter_app/screen/background_screen/page_hit/jackpot_hit_page_led_5200x1664Floor3Mega_No_BG.dart';
-// import 'package:playtech_transmitter_app/screen/background_screen/page_background/jackpot_screen_page_hd_led_1920x1080.dart';
-// import 'package:playtech_transmitter_app/screen/background_screen/page_background/jackpot_screen_page_horizontal_2496x264.dart';
-
 import 'package:playtech_transmitter_app/service/config_custom.dart';
 import 'package:playtech_transmitter_app/screen/background_screen/bloc/video_bloc.dart';
 import 'package:playtech_transmitter_app/service/widget/circlar_progress.dart';
 
 
-class JackpotBackgroundShowNoDelay extends StatefulWidget {
-  const JackpotBackgroundShowNoDelay({super.key});
+class JackpotBackgroundShowNoDelayNoFrame extends StatefulWidget {
+  const JackpotBackgroundShowNoDelayNoFrame({super.key});
   @override
-  _JackpotBackgroundShowNoDelayState createState() => _JackpotBackgroundShowNoDelayState();
+  _JackpotBackgroundShowNoDelayNoFrameState createState() => _JackpotBackgroundShowNoDelayNoFrameState();
 }
 
-class _JackpotBackgroundShowNoDelayState extends State<JackpotBackgroundShowNoDelay>
+class _JackpotBackgroundShowNoDelayNoFrameState extends State<JackpotBackgroundShowNoDelayNoFrame>
     with SingleTickerProviderStateMixin {
   late final Player _player;
   late final VideoController _controller;
@@ -163,10 +147,10 @@ class _JackpotBackgroundShowNoDelayState extends State<JackpotBackgroundShowNoDe
           ),
           builder: (context, value) {
             if (_currentVideoPath != value.currentVideo && !context.read<JackpotBloc2>().state.showImagePage) {
-              // debugPrint('JackpotBackgroundShowNoDelay: Loading new video from VideoBloc: ${value.currentVideo}');
+              // debugPrint('JackpotBackgroundShowNoDelayNoFrame: Loading new video from VideoBloc: ${value.currentVideo}');
               _loadVideo(value.currentVideo);
             }
-            // debugPrint('JackpotBackgroundShowNoDelay: Rendering UI, currentVideo=${value.currentVideo}, count=${value.count}, isRestart=${value.isRestart}');
+            // debugPrint('JackpotBackgroundShowNoDelayNoFrame: Rendering UI, currentVideo=${value.currentVideo}, count=${value.count}, isRestart=${value.isRestart}');
             return RepaintBoundary(
               child: SizedBox.expand(
                 child: Stack(
@@ -182,7 +166,7 @@ class _JackpotBackgroundShowNoDelayState extends State<JackpotBackgroundShowNoDe
                             ),
                           )
                         : circularProgessCustom(),
-                    const RepaintBoundary(child: JackpotDisplayScreenLedHD1920x1080()),
+                    // const RepaintBoundary(child: JackpotDisplayScreenLedHD1920x1080()),
 
                     // const RepaintBoundary(child: JackpotDisplayScreenSlideAnimationLedHD1920x1080()),
 
